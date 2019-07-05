@@ -128,7 +128,7 @@ Type "help()" for more information.
 
 在交互命令行输入 `print('hello RT-Thread!')` ，然后输入回车，将运行这行语句，在下一行输出 hello RT-Thread! 字样。运行效果如下：
 
-![elect_micropytho](../../docs/figures/31_micropython/python_hello.png)
+![elect_micropytho](docs/figures/31_micropython/python_hello.png)
 
 #### 交互命令行的粘贴模式
 
@@ -151,7 +151,7 @@ for i in range(1,10):
 
 执行效果如下：
 
-![elect_micropytho](../../docs/figures/31_micropython/python_grammer_function.png)
+![elect_micropytho](docs/figures/31_micropython/python_grammer_function.png)
 
 #### MicroPython 内建模块
 
@@ -159,11 +159,11 @@ MicroPython 提供丰富的内建模块用来完成相关的程序功能。同�
 
 - 使用 `rtthread` 模块查看当前运行线程，调用方法及效果如下图所示：
 
-![elect_micropytho](../../docs/figures/31_micropython/use_rtthread_module.png)
+![elect_micropytho](docs/figures/31_micropython/use_rtthread_module.png)
 
 - 使用 `time` 模块进行毫秒延时，调用方法及效果如下图所示：
 
-![elect_micropytho](../../docs/figures/31_micropython/use_time_module.png)
+![elect_micropytho](docs/figures/31_micropython/use_time_module.png)
 
 ### MicroPython 例程
 
@@ -193,7 +193,7 @@ while True:
 
 除了可以通过阅读用户手册来了解 MicroPython  的使用方式，还可以直接在 VScode  中搜索 `RT-Thread MicroPython` 来使用 RT-Thread  推出的 MicroPython 开发环境，在开发环境中直接运行示例程序来学习  MicroPython  开发。如下图所示：
 
-![run_example](../../docs/figures/31_micropython/run_example.gif)
+![run_example](docs/figures/31_micropython/run_example.gif)
 
 ## 注意事项
 
