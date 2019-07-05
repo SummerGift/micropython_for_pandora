@@ -214,4 +214,4 @@ while True:
 
 《RT-Thread 编程指南》: docs/RT-Thread 编程指南.pdf
 
-: docs/UM1011-RT-Thread-MicroPython 用户手册
+《MicroPython用户手册》: docs/UM1011-RT-Thread-MicroPython 用户手册
