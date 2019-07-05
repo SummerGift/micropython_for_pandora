@@ -1,4 +1,19 @@
-# 使用 MicroPython 控制硬件
+# MicroPython 集成开发环境内测活动
+
+## 内测活动说明
+
+本次内测内容如下：
+
+1. 编译 Iot Board MicroPython 固件并下载到 IoT Board 潘多拉开发板
+2. 将开发板通过 stlink 虚拟串口连接到 PC 机
+3. 使用 `mkfs filesystem` 命令创建文件系统，重启开发板使系统重新挂载文件系统用于存放 Python 脚本
+4. 在 VScode 搜索并安装 RT-Thread MicroPython 插件，阅读插件的说明文档，按照推荐步骤操作
+5. 在 VScode 上创建 MicroPython 工程
+6. 连接开发板到 RT-Thread MicroPython 插件
+7. 运行插件提供的示例程序
+8. 修改 main.py 文件，实现开机启动自动运行 Python 脚本
+
+各位小伙伴可以随时向我们反馈使用时出现的问题，我们会在第一时间进行改进，更新 MicroPython 固件和插件，让大家能更流畅地使用 MicroPython 进行开发。
 
 ## 简介
 
@@ -12,7 +27,7 @@ MicroPython 是 Python 3 编程语言的一种精简而高效的实现，它包�
 
 ## 软件说明
 
-main 程序代码位于 `examples/31_micropython/applications/main.c` 中, 主要是为 MicroPython 的提供必要的运行环境。
+main 程序代码位于 `applications/main.c` 中, 主要是为 MicroPython 的提供必要的运行环境。
 
 在 main 函数中，主要完成以下几个任务：
 
@@ -189,18 +204,14 @@ while True:
 
 针对自己的开发板修改引脚号，将以上脚本使用**粘贴模式**输入，即可看到 LED 灯按照指定的频率闪烁。使用 `Ctrl-C` 可以取消当前正在运行程序。
 
-除了 LED 之外，还可以使用 MicroPython 控制各种各样的硬件模块，如 `Pin、I2C、SPI、UART、LCD、RTC、PWM、ADC、WDT、TIMER` 等，想要了解这些硬件的详细控制方式，可以查阅 MicroPython 用户手册，里面有详细的介绍。
+除了 LED 之外，还可以使用 MicroPython 控制各种各样的硬件模块，如 `Pin、I2C、SPI、UART、LCD、RTC、PWM、ADC、WDT、TIMER` 等，想要了解这些硬件的详细控制方式，可以查阅 《MicroPython用户手册》，里面有详细的介绍。
 
 除了可以通过阅读用户手册来了解 MicroPython  的使用方式，还可以直接在 VScode  中搜索 `RT-Thread MicroPython` 来使用 RT-Thread  推出的 MicroPython 开发环境，在开发环境中直接运行示例程序来学习  MicroPython  开发。如下图所示：
 
 ![run_example](docs/figures/31_micropython/run_example.gif)
 
-## 注意事项
-
-无
-
 ## 引用参考
 
 《RT-Thread 编程指南》: docs/RT-Thread 编程指南.pdf
 
-《MicroPython用户手册》: docs/UM1011-RT-Thread-MicroPython 用户手册
+: docs/UM1011-RT-Thread-MicroPython 用户手册
