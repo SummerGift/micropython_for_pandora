@@ -5,12 +5,21 @@
 本次内测内容如下：
 
 1. 编译 Iot Board MicroPython 固件并下载到 IoT Board 潘多拉开发板
+
 2. 将开发板通过 stlink 虚拟串口连接到 PC 机
+
 3. 使用 `mkfs filesystem` 命令创建文件系统，重启开发板使系统重新挂载文件系统用于存放 Python 脚本
+
 4. 在 VScode 搜索并安装 RT-Thread MicroPython 插件，阅读插件的说明文档，按照推荐步骤操作
+
 5. 在 VScode 上创建 MicroPython 工程
-6. 连接开发板到 RT-Thread MicroPython 插件
+
+6. 连接开发板到 RT-Thread MicroPython 插件（注意 USB 接口是第二个接口）
+
+   ![USB 连接](docs/figures/31_micropython/usb_connect_interface.png)
+
 7. 运行插件提供的示例程序
+
 8. 修改 main.py 文件，实现开机启动自动运行 Python 脚本
 
 各位小伙伴可以随时向我们反馈使用时出现的问题，我们会在第一时间进行改进，更新 MicroPython 固件和插件，让大家能更流畅地使用 MicroPython 进行开发。
