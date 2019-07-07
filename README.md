@@ -14,7 +14,9 @@
 
    ![USB 连接](docs/figures/31_micropython/usb_connect_interface.png)
 
-5. 运行插件提供的示例程序
+5. 运行插件提供的示例程序（邮件点击示例代码在设备上运行）
+
+   如果总是提示文件同步失败的话，可以先在交互式命令行中 使用 `ctrl +d` 命令进入到 msh，然后使用 `mkfs filesystem` 命令创建文件系统。最后重启开发板使系统重新挂载文件系统即可。
 
 6. 修改 main.py 文件，实现开机启动自动运行 Python 脚本
 
