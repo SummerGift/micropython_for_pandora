@@ -858,7 +858,7 @@
           <name>IlinkAdditionalLibs</name>
           <state />
           <state>$PROJ_DIR$\libraries\rt_ota\libs\librt_ota_noalgo_0.1.2_stm32l4_iar.a</state>
-          <state>$PROJ_DIR$\libraries\wifi\libwifi_6181_0.2.4_armcm4_iar.a</state>
+          <state>$PROJ_DIR$\libraries\wifi\libwifi_6181_0.2.5_armcm4_iar.a</state>
         </option>
         <option>
           <name>IlinkOverrideProgramEntryLabel</name>
@@ -1928,7 +1928,7 @@
           <name>IlinkAdditionalLibs</name>
           <state />
           <state>$PROJ_DIR$\libraries\rt_ota\libs\librt_ota_noalgo_0.1.2_stm32l4_iar.a</state>
-          <state>$PROJ_DIR$\libraries\wifi\libwifi_6181_0.2.4_armcm4_iar.a</state>
+          <state>$PROJ_DIR$\libraries\wifi\libwifi_6181_0.2.5_armcm4_iar.a</state>
         </option>
         <option>
           <name>IlinkOverrideProgramEntryLabel</name>
