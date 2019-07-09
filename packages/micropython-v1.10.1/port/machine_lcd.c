@@ -176,6 +176,19 @@ STATIC mp_obj_t machine_lcd_circle(size_t n_args, const mp_obj_t *args) {
 }
 STATIC MP_DEFINE_CONST_FUN_OBJ_VAR_BETWEEN(machine_lcd_circle_obj, 4, 4, machine_lcd_circle);
 
+/// \method set_color(back, fore)
+///
+/// Set background color and foreground color.
+///
+STATIC mp_obj_t machine_lcd_set_color(size_t n_args, const mp_obj_t *args) {
+    rt_uint16_t back = mp_obj_get_int(args[1]);
+    rt_uint16_t fore = mp_obj_get_int(args[2]);
+
+    lcd_set_color(back, fore);
+    return mp_const_none;
+}
+STATIC MP_DEFINE_CONST_FUN_OBJ_VAR_BETWEEN(machine_lcd_set_color_obj, 3, 3, machine_lcd_set_color);
+
 STATIC const mp_rom_map_elem_t machine_lcd_locals_dict_table[] = {
     // instance methods
     { MP_ROM_QSTR(MP_QSTR_light), MP_ROM_PTR(&machine_lcd_light_obj) },
@@ -185,6 +198,7 @@ STATIC const mp_rom_map_elem_t machine_lcd_locals_dict_table[] = {
     { MP_ROM_QSTR(MP_QSTR_line),  MP_ROM_PTR(&machine_lcd_line_obj)  },
     { MP_ROM_QSTR(MP_QSTR_rectangle), MP_ROM_PTR(&machine_lcd_rectangle_obj) },
     { MP_ROM_QSTR(MP_QSTR_circle), MP_ROM_PTR(&machine_lcd_circle_obj) }, 
+    { MP_ROM_QSTR(MP_QSTR_set_color), MP_ROM_PTR(&machine_lcd_set_color_obj) }, 
     // color
     { MP_ROM_QSTR(MP_QSTR_WHITE), MP_ROM_INT(WHITE) },
     { MP_ROM_QSTR(MP_QSTR_BLACK), MP_ROM_INT(BLACK) },

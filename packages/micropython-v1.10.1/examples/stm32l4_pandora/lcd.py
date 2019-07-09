@@ -13,6 +13,7 @@ from machine import LCD     # Import the LCD class from machine
 lcd = LCD()                             # Create a LCD object
 lcd.light(False)                        # Close the backlight
 lcd.light(True)                         # Open the backlight
+lcd.set_color(WHITE, BLACK)             # Set background color and foreground color
 lcd.fill(lcd.BLACK)                     # Fill the entire LCD with black
 lcd.fill(lcd.RED)                       # Fill the entire LCD with red
 lcd.fill(lcd.GRAY)                      # Fill the entire LCD with gray
