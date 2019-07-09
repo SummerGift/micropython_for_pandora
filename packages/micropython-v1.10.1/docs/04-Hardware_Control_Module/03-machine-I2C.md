@@ -64,24 +64,24 @@
 
 一些 `I2C` 设备充当一个内存设备，可以读取和写入。在这种情况下，有两个与 `I2C` 相关的地址，从机地址和内存地址。下面的方法是与这些设备进行通信的便利函数。
 
-#### **I2C.readfrom_mem**(addr, memaddr, nbytes, *, addrsize=8)
+#### **I2C.readfrom_mem**(addr, memaddr, nbytes, \*, addrsize=8)
 从 `addr` 指定的从设备中 `memaddr` 地址开始读取 n 个字节。`addrsize` 参数指定地址的长度。返回一个存储读取数据的字节对象。
 
-#### **I2C.readfrom_mem_into**(addr, memaddr, buf, *, addrsize=8)
+#### **I2C.readfrom_mem_into**(addr, memaddr, buf, \*, addrsize=8)
 从 `addr` 指定的从设备中 `memaddr` 地址读取数据到 `buf` 中，，读取的字节数是 `buf` 的长度。  
 这个方法没有返回值。
 
-#### **I2C.writeto_mem**(addr, memaddr, buf, *, addrsize=8)
+#### **I2C.writeto_mem**(addr, memaddr, buf, \*, addrsize=8)
 将 `buf` 里的数据写入 `addr` 指定的从机的 `memaddr` 地址中。 
 这个方法没有返回值。
 
 ### 示例
 
-#### `软件模拟 I2C `
-```
+#### 软件模拟 I2C
+```python
 >>> from machine import Pin, I2C
->>> clk = Pin(("clk", 43), Pin.OUT_OD)   # Select the 43 pin device as the clock
->>> sda = Pin(("sda", 44), Pin.OUT_OD)   # Select the 44 pin device as the data line
+>>> clk = Pin(("clk", 29), Pin.OUT_OD)   # Select the 29 pin device as the clock
+>>> sda = Pin(("sda", 30), Pin.OUT_OD)   # Select the 30 pin device as the data line
 >>> i2c = I2C(-1, clk, sda, freq=100000) # create I2C peripheral at frequency of 100kHz
 >>> i2c.scan()                        # scan for slaves, returning a list of 7-bit addresses
 [81]                                  # Decimal representation
@@ -95,16 +95,17 @@ b'\x12'                               # starting at memory-address 8 in the slav
                                       # starting at address 2 in the slave
 ```
 
-#### `硬件 I2C `
+#### 硬件 I2C
 
 需要先开启 `I2C` 设备驱动，查找设备可以在 `msh` 中输入`list_device` 命令。  
 在构造函数的第一个参数传入 `0`，系统就会搜索名为 `i2c0` 的设备，找到之后使用这个设备来构建 `I2C` 对象：
 
-```
+```python
 >>> from machine import Pin, I2C
->>> i2c = I2C(0)           # create I2C peripheral at frequency of 100kHz
+>>> i2c = I2C(0)                      # create I2C peripheral at frequency of 100kHz
 >>> i2c.scan()                        # scan for slaves, returning a list of 7-bit addresses
 [81]                                  # Decimal representation
 ```
 
   更多内容可参考 [machine.I2C](http://docs.micropython.org/en/latest/pyboard/library/machine.I2C.html) 。
+

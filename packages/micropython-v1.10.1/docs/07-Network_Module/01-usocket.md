@@ -23,7 +23,10 @@
 
 ### 函数
 
-#### **socket.socket**(socket.AF_INET, socket.SOCK_STREAM, socket.IPPROTO_TCP)  
+#### **socket.socket**
+
+`socket.socket(socket.AF_INET, socket.SOCK_STREAM, socket.IPPROTO_TCP)` 
+
 创建新的套接字，使用指定的地址、类型和协议号。
 
 #### **socket.getaddrinfo**(host, port) 

@@ -118,13 +118,13 @@ void mpy_main(const char *filename) {
 #ifdef MICROPYTHON_USING_UOS
         // run boot-up scripts
         void *frozen_data;
-        const char *_boot_file = "_boot.py", *boot_file = "boot.py", *main_file = "/scripts/main.py";
-//        if (mp_find_frozen_module(_boot_file, strlen(_boot_file), &frozen_data) != MP_FROZEN_NONE) {
-//            pyexec_frozen_module(_boot_file);
-//        }
-//        if (!access(boot_file, 0)) {
-//            pyexec_file(boot_file);
-//        }
+        const char *_boot_file = "_boot.py", *boot_file = "boot.py", *main_file = "main.py";
+        if (mp_find_frozen_module(_boot_file, strlen(_boot_file), &frozen_data) != MP_FROZEN_NONE) {
+            pyexec_frozen_module(_boot_file);
+        }
+        if (!access(boot_file, 0)) {
+            pyexec_file(boot_file);
+        }
         // run main scripts
         if (!access(main_file, 0)) {
             if (pyexec_mode_kind == PYEXEC_MODE_FRIENDLY_REPL) {

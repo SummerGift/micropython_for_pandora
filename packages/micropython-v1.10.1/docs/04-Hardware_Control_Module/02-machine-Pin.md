@@ -4,14 +4,14 @@
 
 `Pin` 对象用于控制输入/输出引脚（也称为 `GPIO`）。`Pin` 对象通常与一个物理引脚相关联，他可以驱动输出电压和读取输入电压。Pin 类中有设置引脚模式（输入/输出）的方法，也有获取和设置数字逻辑（`0` 或 `1`）的方法。
 
-一个 `Pin` 对象是通过一个标识符来构造的，它明确地指定了一个特定的输入输出。标识符的形式和物理引脚的映射是特定于一次移植的。标识符可以是整数，字符串或者是一个带有端口和引脚号码的元组。在 RT-Thread MicroPython 中，引脚标识符是一个由代号和引脚号组成的元组，如 `Pin(("X1", 33), Pin.OUT_PP)` 中的` ("X1", 33)`。
+一个 `Pin` 对象是通过一个标识符来构造的，它明确地指定了一个特定的输入输出。标识符的形式和物理引脚的映射是特定于一次移植的。标识符可以是整数，字符串或者是一个带有端口和引脚号码的元组。在 RT-Thread MicroPython 中，引脚标识符是一个由代号和引脚号组成的元组，如 `Pin(("PB15", 31), Pin.OUT_PP)` 中的` ("PB15", 31)`。
 
 ### 构造函数
 
 在 RT-Thread MicroPython 中 `Pin` 对象的构造函数如下：
 
 #### **class machine.Pin**( id, mode = -1, pull = -1，value)
-- **id** ：由用户自定义的引脚名和 `Pin`  设备引脚号组成，如("X1", 33)，"X1" 为用户自定义的引脚名，`33` 为 `RT-Thread Pin` 设备驱动在本次移植中的引脚号。
+- **id** ：由用户自定义的引脚名和 `Pin`  设备引脚号组成，如 ("PB15", 31)，"PB15" 为用户自定义的引脚名，`31` 为 `RT-Thread Pin` 设备驱动在本次移植中的引脚号。
 
 - **mode** ： 指定引脚模式，可以是以下几种：
     - **Pin.IN** ：输入模式
@@ -27,7 +27,8 @@
 
 ### 方法
 
-#### **Pin.init**(mode= -1, pull= -1, *, value, drive, alt)
+#### **Pin.init**(mode= -1, pull= -1, \*, value, drive, alt)
+
 根据输入的参数重新初始化引脚。只有那些被指定的参数才会被设置，其余引脚的状态将保持不变，详细的参数可以参考上面的构造函数。
 
 #### **Pin.value**([x])
@@ -55,14 +56,17 @@
 ### 示例
 
 ```
->>> from machine import Pin
->>>
->>> p_out = Pin(("X1", 33), Pin.OUT_PP)
->>> p_out.value(1)              # set io high
->>> p_out.value(0)              # set io low
->>>
->>> p_in = Pin(("X2", 32), Pin.IN, Pin.PULL_UP)
->>> p_in.value()                # get value, 0 or 1
+from machine import Pin
+
+PIN_OUT = 31
+PIN_IN  = 58
+
+p_out = Pin(("PB15", PIN_OUT), Pin.OUT_PP)
+p_out.value(1)                 # set io high
+p_out.value(0)                 # set io low
+
+p_in = Pin(("key_0", PIN_IN), Pin.IN, Pin.PULL_UP)
+print(p_in.value() )           # get value, 0 or 1
 ```
 
   更多内容可参考 [machine.Pin](http://docs.micropython.org/en/latest/pyboard/library/machine.Pin.html)  。

@@ -35,10 +35,10 @@
 ### 示例
 
 ``` python
->>> from machine import ADC     # 从 machine 导入 ADC 类
->>> adc = ADC(2, 5)             # 创建 ADC 对象，当前使用编号为 2 的 ADC 设备的 5 通道
->>> adc.read()                  # 获取 ADC 对象采样值
+>>> from machine import ADC      # 从 machine 导入 ADC 类
+>>> adc = ADC(1, 13)             # 创建 ADC 对象，当前使用编号为 1 的 ADC 设备的 13 通道
+>>> adc.read()                   # 获取 ADC 对象采样值
 4095
->>> adc.deinit()                # 关闭 ADC 对象
->>> adc.init(5)                 # 开启并重新配置 ADC 对象
+>>> adc.deinit()                 # 关闭 ADC 对象
+>>> adc.init(13)                 # 开启并重新配置 ADC 对象
 ```

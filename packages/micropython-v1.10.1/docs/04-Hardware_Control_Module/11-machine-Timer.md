@@ -38,7 +38,7 @@ def callback_test(device):         # 回调函数有且只有一个入参，为�
 该函数使用方式如下示例所示：
 
 ```python
-timer.init(wdt.PERIOD,5000,callback_test)   # 设置定时器模式为周期性执行，超时时间为 5 秒, 超时函数为 callback_test
+timer.init(wdt.PERIOD, 5000, callback_test)   # 设置定时器模式为周期性执行，超时时间为 5 秒, 超时函数为 callback_test
 ```
 #### **Timer.deinit**()
 
@@ -56,7 +56,7 @@ timer.init(wdt.PERIOD,5000,callback_test)   # 设置定时器模式为周期性�
 
 ```python
 >>> from machine import Timer                       # 从 machine 导入 Timer 类
->>> timer = Timer(11)                               # 创建 Timer 对象，当前设备编号为 11
+>>> timer = Timer(15)                               # 创建 Timer 对象，当前设备编号为 11
 >>>                                                 # 进入粘贴模式
 paste mode; Ctrl-C to cancel, Ctrl-D to finish
 === def callback_test(device):                      # 定义超时回调函数 

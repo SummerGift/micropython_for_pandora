@@ -25,15 +25,31 @@ VSCode 最好用的 MicroPython 插件，为 MicroPython 开发提供了强大�
 
 ## 快速入门
 
-1. 打开一个文件夹作为工程的根目录
+### 创建一个 MicroPython 工程
 
 ![open_dir](assets/open_dir.gif)
 
-2. 将开发板接入网络或者通过 USB 连接到 PC 并点击左下角的设备连接按钮
+### 连接开发板
+
+可以通过多种方式与开发板建立连接，现支持 USB 和网络连接方式。
+
+- USB 连接方式
+
+直接将开发板通过 USB 连接到 PC 机，将会自动通过 USB 连接设备，如下图所示：
+
+![usb_connect_device](assets/usb_connect.gif)
+
+- 网络连接方式
+
+点击连接按钮，然后选择想要连接的设备名称，如下图所示：
 
 ![connect_device](assets/connect_device.gif)
 
-3. 运行示例代码并观察代码在开发板上的运行效果
+注意：第一次连接网络时请先用 USB 或者串口连接电脑，然后参考 network 例程进行网络连接。
+
+### 运行示例代码
+
+和开发板建立连接后，可以直接运行示例代码，并观察代码在开发板上的运行效果，如下图所示：
 
 ![run_example](assets/run_example.gif)
 
@@ -65,3 +81,8 @@ VSCode 最好用的 MicroPython 插件，为 MicroPython 开发提供了强大�
 
 在 PowerShell 终端中输入 `Set-ItemProperty HKCU:\Console VirtualTerminalLevel -Type DWORD 1` 可以解决退格键等显示乱码的问题。
 
+- 不要删除工程目录下的 `.mpyproject.json` 文件
+
+该文件是 MicroPython 工程的配置文件，删除后将无法正常运行 MicroPython 代码程序。
+
+  
