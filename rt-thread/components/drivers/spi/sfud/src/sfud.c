@@ -95,7 +95,7 @@ sfud_err sfud_device_init(sfud_flash *flash) {
     }
     if (result == SFUD_SUCCESS) {
         flash->init_ok = true;
-        SFUD_INFO("%s flash device is initialize success.", flash->name);
+//        SFUD_INFO("%s flash device is initialize success.", flash->name);
     } else {
         flash->init_ok = false;
         SFUD_INFO("Error: %s flash device is initialize fail.", flash->name);
@@ -113,8 +113,8 @@ sfud_err sfud_init(void) {
     sfud_err cur_flash_result = SFUD_SUCCESS, all_flash_result = SFUD_SUCCESS;
     size_t i;
 
-    SFUD_DEBUG("Start initialize Serial Flash Universal Driver(SFUD) V%s.", SFUD_SW_VERSION);
-    SFUD_DEBUG("You can get the latest version on https://github.com/armink/SFUD .");
+//    SFUD_DEBUG("Start initialize Serial Flash Universal Driver(SFUD) V%s.", SFUD_SW_VERSION);
+//    SFUD_DEBUG("You can get the latest version on https://github.com/armink/SFUD .");
     /* initialize all flash device in flash device table */
     for (i = 0; i < sizeof(flash_table) / sizeof(sfud_flash); i++) {
         /* initialize flash device index of flash device information table */
@@ -333,12 +333,12 @@ static sfud_err hardware_init(sfud_flash *flash) {
         }
         /* print manufacturer and flash chip name */
         if (flash_mf_name && flash->chip.name) {
-            SFUD_INFO("Find a %s %s flash chip. Size is %ld bytes.", flash_mf_name, flash->chip.name,
-                    flash->chip.capacity);
+//            SFUD_INFO("Find a %s %s flash chip. Size is %ld bytes.", flash_mf_name, flash->chip.name,
+//                    flash->chip.capacity);
         } else if (flash_mf_name) {
-            SFUD_INFO("Find a %s flash chip. Size is %ld bytes.", flash_mf_name, flash->chip.capacity);
+//            SFUD_INFO("Find a %s flash chip. Size is %ld bytes.", flash_mf_name, flash->chip.capacity);
         } else {
-            SFUD_INFO("Find a flash chip. Size is %ld bytes.", flash->chip.capacity);
+//            SFUD_INFO("Find a flash chip. Size is %ld bytes.", flash->chip.capacity);
         }
     }
 

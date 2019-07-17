@@ -203,7 +203,7 @@ struct rt_device *fal_blk_device_create(const char *parition_name)
         /* no private */
         blk_dev->parent.user_data = RT_NULL;
 
-        log_i("The FAL block device (%s) created successfully", fal_part->name);
+//        log_i("The FAL block device (%s) created successfully", fal_part->name);
         rt_device_register(RT_DEVICE(blk_dev), fal_part->name, RT_DEVICE_FLAG_RDWR | RT_DEVICE_FLAG_STANDALONE);
     }
     else

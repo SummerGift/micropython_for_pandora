@@ -67,5 +67,5 @@ int main(void)
     mpy_main(NULL);
 
    LOG_D("You can enter repl mode by typing python commands.");
-//   rt_hw_cpu_reset();
+   rt_hw_cpu_reset();
 }

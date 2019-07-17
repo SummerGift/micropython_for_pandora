@@ -53,7 +53,7 @@ __exit:
     if ((result > 0) && (!init_ok))
     {
         init_ok = 1;
-        log_i("RT-Thread Flash Abstraction Layer (V%s) initialize success.", FAL_SW_VERSION);
+//        log_i("RT-Thread Flash Abstraction Layer (V%s) initialize success.", FAL_SW_VERSION);
     }
     else if(result <= 0)
     {
