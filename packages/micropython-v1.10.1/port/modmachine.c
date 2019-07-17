@@ -114,8 +114,9 @@ STATIC mp_obj_t machine_unique_id(void) {
 MP_DEFINE_CONST_FUN_OBJ_0(machine_unique_id_obj, machine_unique_id);
 
 STATIC mp_obj_t machine_reset(void) {
-    //TODO
-    MP_RTT_NOT_IMPL_PRINT;
+
+    extern void rt_hw_cpu_reset(void);
+    rt_hw_cpu_reset();
     return mp_const_none;
 }
 MP_DEFINE_CONST_FUN_OBJ_0(machine_reset_obj, machine_reset);
