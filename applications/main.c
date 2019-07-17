@@ -66,6 +66,6 @@ int main(void)
     extern void mpy_main(const char *filename);
     mpy_main(NULL);
 
-   LOG_D("You can enter repl mode by typing python commands.");
-   rt_hw_cpu_reset();
+    LOG_D("You can enter repl mode by typing python commands.");
+    rt_hw_cpu_reset();
 }
