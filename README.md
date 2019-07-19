@@ -1,6 +1,26 @@
 # MicroPython 集成开发环境内测活动
 
-## 内测活动说明
+## 内测第二期活动说明
+
+本次内测内容如下：
+
+1. 编译 IoT Board MicroPython 固件并下载到 IoT Board 潘多拉开发板
+
+2. 在 VScode 搜索并安装 RT-Thread MicroPython 插件，阅读插件的说明文档，按照推荐步骤操作
+
+3. 在 VScode 上创建 MicroPython 工程
+
+4. 连接开发板到 RT-Thread MicroPython 插件
+
+   ![1563527282041](assets/1563527282041.png)
+
+5. 运行插件提供的示例程序（右键点击示例代码在设备上运行）
+
+6. 修改 main.py 文件，实现开机启动自动运行 Python 脚本
+
+各位小伙伴可以随时向我们反馈使用时出现的问题，我们会在第一时间进行改进，更新 MicroPython 固件和插件，让大家能更流畅地使用 MicroPython 进行开发。
+
+## 内测第一期活动说明
 
 本次内测内容如下：
 
@@ -14,7 +34,7 @@
 
    ![USB 连接](docs/figures/31_micropython/usb_connect_interface.png)
 
-5. 运行插件提供的示例程序（邮件点击示例代码在设备上运行）
+5. 运行插件提供的示例程序（右键点击示例代码在设备上运行）
 
    如果总是提示文件同步失败的话，可以先在交互式命令行中 使用 `ctrl +d` 命令进入到 msh，然后使用 `mkfs filesystem` 命令创建文件系统。最后重启开发板使系统重新挂载文件系统即可。
 
