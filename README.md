@@ -12,7 +12,7 @@
 
 4. 连接开发板到 RT-Thread MicroPython 插件
 
-   ![1563527282041](assets/1563527282041.png)
+   ![uart_connect](assets/uart_connect.gif)
 
 5. 运行插件提供的示例程序（右键点击示例代码在设备上运行）
 
