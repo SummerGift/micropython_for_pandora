@@ -113,7 +113,7 @@ STATIC const mp_rom_map_elem_t os_module_globals_table[] = {
     { MP_ROM_QSTR(MP_QSTR_sync), MP_ROM_PTR(&mod_os_sync_obj) },
 
 #if defined(MICROPY_UOS_ENABLE_FILESYNC)
-    { MP_ROM_QSTR(MP_QSTR_file_md5), MP_ROM_PTR(&mp_posix_file_md5_obj) },
+    { MP_ROM_QSTR(MP_QSTR_file_crc), MP_ROM_PTR(&mp_posix_file_crc_obj) },
 #endif
 
     /// \constant sep - separation character used in paths
