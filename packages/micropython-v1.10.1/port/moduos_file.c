@@ -223,17 +223,19 @@ mp_obj_t mp_posix_stat(mp_obj_t path_in) {
 }
 MP_DEFINE_CONST_FUN_OBJ_1(mp_posix_stat_obj, mp_posix_stat);
 
-static uint32_t calc_crc32(const char* pathname, void *buffer, int size)
+static uint32_t calc_crc32(const char* pathname, int size)
 {
     extern uint32_t mp_calc_crc32(uint32_t crc, const void *buf, size_t len);
-    uint32_t temp_crc = 0;
-
-    int fd;
     
+    int fd;
+    uint32_t temp_crc = 0;
+    void *buffer = malloc(512);
+
     if (buffer == RT_NULL)
     {
-        return -MP_EINVAL;;
+        mp_raise_OSError(MP_ENOMEM);
     }
+
     fd = open(pathname, O_RDONLY, 0);
     if (fd < 0)
     {
@@ -255,26 +257,19 @@ static uint32_t calc_crc32(const char* pathname, void *buffer, int size)
     }
 
     close(fd);
+    free(buffer);
 
     return temp_crc;
 }
 
 mp_obj_t mp_posix_file_crc32(mp_obj_t path_in) {
     extern void mp_hex_to_str(char *pbDest, char *pbSrc, int nLen);
-    const char *createpath = mp_obj_str_get_str(path_in);
+    
     uint32_t value = 0;
-    
-    void *md5_buff = malloc(512);
-    if (md5_buff == RT_NULL)
-    {
-        mp_raise_OSError(MP_ENOMEM);
-    }
-
-    value = calc_crc32((char *)createpath, md5_buff, 512);
-
-    free(md5_buff);
     char str[9];
-    
+    const char *createpath = mp_obj_str_get_str(path_in);
+
+    value = calc_crc32((char *)createpath, 512);
     mp_hex_to_str(str,(char *)&value, 4);
 
     return mp_obj_new_str(str, strlen(str));

@@ -1371,7 +1371,7 @@
 
   <Group>
     <GroupName>MicroPython</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -3479,7 +3479,7 @@
       <GroupNumber>13</GroupNumber>
       <FileNumber>267</FileNumber>
       <FileType>1</FileType>
-      <tvExp>1</tvExp>
+      <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>packages\micropython-v1.10.1\port\moduos_file.c</PathWithFileName>
