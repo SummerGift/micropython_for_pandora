@@ -1921,6 +1921,11 @@
               <FilePath>packages\micropython-v1.10.1\port\modusocket.c</FilePath>
             </File>
             <File>
+              <FileName>modutils.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\micropython-v1.10.1\port\modutils.c</FilePath>
+            </File>
+            <File>
               <FileName>modutime.c</FileName>
               <FileType>1</FileType>
               <FilePath>packages\micropython-v1.10.1\port\modutime.c</FilePath>
