@@ -225,8 +225,6 @@ mp_obj_t mp_posix_stat(mp_obj_t path_in) {
 }
 MP_DEFINE_CONST_FUN_OBJ_1(mp_posix_stat_obj, mp_posix_stat);
 
-#if defined(MICROPY_UOS_ENABLE_FILESYNC)
-
 static const uint32_t crc32_table[] =
 {
     0x00000000, 0x77073096, 0xee0e612c, 0x990951ba, 0x076dc419, 0x706af48f,
@@ -370,7 +368,6 @@ mp_obj_t mp_posix_file_crc(mp_obj_t path_in) {
     return mp_obj_new_str(str, strlen(str));
 }
 MP_DEFINE_CONST_FUN_OBJ_1(mp_posix_file_crc_obj, mp_posix_file_crc);
-#endif
 
 mp_import_stat_t mp_posix_import_stat(const char *path) {
 
