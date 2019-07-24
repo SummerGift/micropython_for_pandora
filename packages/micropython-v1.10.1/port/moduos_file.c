@@ -56,7 +56,7 @@ mp_obj_t mp_posix_mkfs(size_t n_args, const mp_obj_t *args)  {
     if (n_args == 0)
     {
         rt_kprintf("Usage: os.mkfs(\"filesystem type\", \"device name\")\n");
-        rt_kprintf("example: os.mkfs(\"elm\", \"filesystem\")\n");
+        rt_kprintf("example: os.mkfs(\"elm\", \"fs\")\n");
         return mp_const_none;
     }
 
