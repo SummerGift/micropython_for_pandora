@@ -53,6 +53,7 @@ mp_obj_t mp_posix_rmdir(uint n_args, const mp_obj_t *arg);
 mp_obj_t mp_posix_stat(mp_obj_t path_in);
 mp_obj_t mp_posix_statvfs(mp_obj_t path_in);
 mp_obj_t mp_posix_file_crc32(mp_obj_t path_in);
+mp_obj_t mp_posix_mkfs(size_t n_args, const mp_obj_t *args);
 
 MP_DECLARE_CONST_FUN_OBJ_KW(mp_posix_mount_obj);
 MP_DECLARE_CONST_FUN_OBJ_1(mp_posix_umount_obj);
@@ -67,5 +68,5 @@ MP_DECLARE_CONST_FUN_OBJ_VAR(mp_posix_rmdir_obj);
 MP_DECLARE_CONST_FUN_OBJ_1(mp_posix_stat_obj);
 MP_DECLARE_CONST_FUN_OBJ_1(mp_posix_statvfs_obj);
 MP_DECLARE_CONST_FUN_OBJ_1(mp_posix_file_crc32_obj);
-
+MP_DECLARE_CONST_FUN_OBJ_VAR_BETWEEN(mp_posix_mkfs_obj);
 #endif // MICROPY_INCLUDED_PY_MODUOS_FILE_H
