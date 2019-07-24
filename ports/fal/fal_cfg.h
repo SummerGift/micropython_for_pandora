@@ -37,7 +37,7 @@ extern const struct fal_flash_dev nor_flash0;
     {FAL_PART_MAGIC_WROD,   "download",    "nor_flash",                           512 * 1024,      1024 * 1024, 0}, \
     {FAL_PART_MAGIC_WROD, "wifi_image",    "nor_flash",                  (512 + 1024) * 1024,       512 * 1024, 0}, \
     {FAL_PART_MAGIC_WROD,       "font",    "nor_flash",            (512 + 1024 + 512) * 1024,  7 * 1024 * 1024, 0}, \
-    {FAL_PART_MAGIC_WROD, "filesystem",    "nor_flash", (512 + 1024 + 512 + 7 * 1024) * 1024,  7 * 1024 * 1024, 0}, \
+    {FAL_PART_MAGIC_WROD,         "fs",    "nor_flash", (512 + 1024 + 512 + 7 * 1024) * 1024,  7 * 1024 * 1024, 0}, \
 }
 #endif /* FAL_PART_HAS_TABLE_CFG */
 #endif /* _FAL_CFG_H_ */

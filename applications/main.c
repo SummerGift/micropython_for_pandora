@@ -19,7 +19,7 @@
 #define LOG_TAG               "main"
 #include <ulog.h>
 
-#define FS_PARTITION_NAME     "filesystem"
+#define FS_PARTITION_NAME     "fs"
 
 int main(void)
 {
