@@ -28,6 +28,7 @@
 #if MICROPY_PY_RTTHREAD
 
 #include <rtthread.h>
+#include <string.h>
 
 #include "py/runtime.h"
 
@@ -61,11 +62,39 @@ STATIC mp_obj_t mod_stacks_analyze(void) {
 }
 STATIC MP_DEFINE_CONST_FUN_OBJ_0(mod_stacks_analyze_obj, mod_stacks_analyze);
 
+STATIC mp_obj_t mod_list_device(void) {
+    struct rt_device *device;
+    struct rt_list_node *node;
+    rt_ubase_t level;
+
+    struct rt_object_information *info = rt_object_get_information(RT_Object_Class_Device);
+    struct rt_list_node *list = &info->object_list;
+    mp_obj_t mp_list = mp_obj_new_list(0, NULL);
+
+    level = rt_hw_interrupt_disable();
+
+    for (node = list->next; node != list; node = node->next)
+    {
+        device = (struct rt_device *)(rt_list_entry(node, struct rt_object, list));
+
+        mp_obj_tuple_t *t = mp_obj_new_tuple(2, NULL);
+        t->items[0] = mp_obj_new_str(device->parent.name, strlen((char *)device->parent.name));
+        t->items[1] = MP_OBJ_NEW_SMALL_INT((device->type <= RT_Device_Class_Unknown) ? device->type : RT_Device_Class_Unknown);
+        mp_obj_list_append(mp_list, MP_OBJ_FROM_PTR(t));
+    }
+
+    rt_hw_interrupt_enable(level);
+
+    return mp_list;
+}
+STATIC MP_DEFINE_CONST_FUN_OBJ_0(mod_list_device_obj, mod_list_device);
+
 STATIC const mp_rom_map_elem_t mp_module_rtthread_globals_table[] = {
     { MP_ROM_QSTR(MP_QSTR___name__), MP_ROM_QSTR(MP_QSTR_rtthread) },
     { MP_ROM_QSTR(MP_QSTR_is_preempt_thread), MP_ROM_PTR(&mod_is_preempt_thread_obj) },
     { MP_ROM_QSTR(MP_QSTR_current_tid), MP_ROM_PTR(&mod_current_tid_obj) },
     { MP_ROM_QSTR(MP_QSTR_stacks_analyze), MP_ROM_PTR(&mod_stacks_analyze_obj) },
+    { MP_ROM_QSTR(MP_QSTR_list_device), MP_ROM_PTR(&mod_list_device_obj) },
 };
 
 STATIC MP_DEFINE_CONST_DICT(mp_module_rtthread_globals, mp_module_rtthread_globals_table);
