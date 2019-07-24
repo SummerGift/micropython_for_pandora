@@ -71,7 +71,7 @@ STATIC mp_obj_t mod_list_device(void) {
     struct rt_list_node *list = &info->object_list;
     mp_obj_t mp_list = mp_obj_new_list(0, NULL);
 
-    level = rt_hw_interrupt_disable();
+    rt_enter_critical();
 
     for (node = list->next; node != list; node = node->next)
     {
@@ -83,7 +83,7 @@ STATIC mp_obj_t mod_list_device(void) {
         mp_obj_list_append(mp_list, MP_OBJ_FROM_PTR(t));
     }
 
-    rt_hw_interrupt_enable(level);
+    rt_exit_critical();
 
     return mp_list;
 }

@@ -53,13 +53,6 @@ mp_obj_t mp_posix_mkfs(size_t n_args, const mp_obj_t *args)  {
     int result = RT_EOK;
     char *type = "elm"; /* use the default file system type as 'fatfs' */
 
-    if (n_args == 0)
-    {
-        rt_kprintf("Usage: os.mkfs(\"filesystem type\", \"device name\")\n");
-        rt_kprintf("example: os.mkfs(\"elm\", \"fs\")\n");
-        return mp_const_none;
-    }
-
     if (n_args == 1)
     {
         result = dfs_mkfs(type, mp_obj_str_get_str(args[0]));
@@ -76,7 +69,7 @@ mp_obj_t mp_posix_mkfs(size_t n_args, const mp_obj_t *args)  {
 
     return mp_const_none;
 }
-MP_DEFINE_CONST_FUN_OBJ_VAR_BETWEEN(mp_posix_mkfs_obj, 0, 2, mp_posix_mkfs);
+MP_DEFINE_CONST_FUN_OBJ_VAR_BETWEEN(mp_posix_mkfs_obj, 1, 2, mp_posix_mkfs);
 
 mp_obj_t mp_posix_chdir(mp_obj_t path_in) {
     const char *changepath = mp_obj_str_get_str(path_in);
