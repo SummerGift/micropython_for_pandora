@@ -40,6 +40,11 @@
   "name": "FAL"
  }, 
  {
+  "path": "/packages/system/littlefs", 
+  "ver": "v2.0.5", 
+  "name": "LITTLEFS"
+ }, 
+ {
   "path": "/packages/peripherals/stm32_sdio", 
   "ver": "v1.0.2", 
   "name": "STM32_SDIO"

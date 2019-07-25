@@ -332,7 +332,7 @@ struct rt_device *fal_mtd_nor_device_create(const char *parition_name)
         /* set ops */
         mtd_nor_dev->parent.ops = &_ops;
 
-        log_i("The FAL MTD NOR device (%s) created successfully", fal_part->name);
+//        log_i("The FAL MTD NOR device (%s) created successfully", fal_part->name);
         rt_mtd_nor_register_device(fal_part->name, &mtd_nor_dev->parent);
     }
     else
