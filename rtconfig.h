@@ -63,18 +63,6 @@
 #define DFS_FILESYSTEMS_MAX 4
 #define DFS_FILESYSTEM_TYPES_MAX 4
 #define DFS_FD_MAX 32
-#define RT_USING_DFS_ELMFAT
-
-/* elm-chan's FatFs, Generic FAT Filesystem Module */
-
-#define RT_DFS_ELM_CODE_PAGE 437
-#define RT_DFS_ELM_WORD_ACCESS
-#define RT_DFS_ELM_USE_LFN_3
-#define RT_DFS_ELM_USE_LFN 3
-#define RT_DFS_ELM_MAX_LFN 255
-#define RT_DFS_ELM_DRIVES 2
-#define RT_DFS_ELM_MAX_SECTOR_SIZE 4096
-#define RT_DFS_ELM_REENTRANT
 #define RT_USING_DFS_DEVFS
 
 /* Device Drivers */
@@ -93,6 +81,7 @@
 #define RT_USING_PIN
 #define RT_USING_ADC
 #define RT_USING_PWM
+#define RT_USING_MTD_NOR
 #define RT_USING_RTC
 #define RT_USING_SOFT_RTC
 #define RTC_SYNC_USING_NTP
@@ -350,6 +339,14 @@
 #define FAL_PART_HAS_TABLE_CFG
 #define PKG_USING_FAL_V00300
 #define PKG_FAL_VER_NUM 0x00300
+#define PKG_USING_LITTLEFS
+#define PKG_USING_LITTLEFS_V205
+#define LFS_READ_SIZE 256
+#define LFS_PROG_SIZE 256
+#define LFS_BLOCK_SIZE 4096
+#define LFS_CACHE_SIZE 256
+#define LFS_BLOCK_CYCLES 0
+#define LFS_LOOKAHEAD_MAX 128
 
 /* peripheral libraries and drivers */
 
