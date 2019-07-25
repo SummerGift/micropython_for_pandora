@@ -119,12 +119,6 @@
 
 /* Using USB */
 
-#define RT_USING_USB_DEVICE
-#define RT_USBD_THREAD_STACK_SZ 4096
-#define USB_VENDOR_ID 0x0FFE
-#define USB_PRODUCT_ID 0x0001
-#define _RT_USB_DEVICE_NONE
-#define RT_USB_DEVICE_NONE
 
 /* POSIX layer and C standard library */
 
@@ -226,8 +220,6 @@
 
 /* IoT - internet of things */
 
-#define PKG_USING_CJSON
-#define PKG_USING_CJSON_V102
 
 /* Wi-Fi */
 
@@ -246,19 +238,9 @@
 
 /* IoT Cloud */
 
-#define PKG_USING_LSSDP
-#define PKG_USING_LSSDP_V010
 
 /* security packages */
 
-#define PKG_USING_TINYCRYPT
-#define PKG_USING_TINYCRYPT_V100
-#define TINY_CRYPT_MD5
-#define TINY_CRYPT_BASE64
-#define TINY_CRYPT_AES
-#define TINY_CRYPT_AES_ROM_TABLES
-#define TINY_CRYPT_SHA1
-#define TINY_CRYPT_SHA256
 
 /* language packages */
 
@@ -300,7 +282,7 @@
 /* Network Module */
 
 #define MICROPYTHON_USING_USOCKET
-#define PKG_MICROPYTHON_HEAP_SIZE 30720
+#define PKG_MICROPYTHON_HEAP_SIZE 31744
 #define PKG_USING_MICROPYTHON_V11001
 #define PKG_MICROPYTHON_VER_NUM 0x11001
 
@@ -319,18 +301,6 @@
 #define PKG_EASYFLASH_START_ADDR 0
 #define PKG_USING_EASYFLASH_V321
 #define PKG_EASYFLASH_VER_NUM 0x30201
-#define PKG_USING_ADBD
-#define ADB_TR_TCPIP_ENABLE
-#define ADB_TR_USB_ENABLE
-#define ADB_TR_STACK_SIZE 1280
-#define ADB_SERVICE_SHELL_ENABLE
-#define ADB_SERVICE_FILE_ENABLE
-#define ADB_FILESYNC_STACK_SIZE 2304
-#define ADB_FILESYNC_RECV_TIMEOUT 2000
-#define ADB_EXTERNAL_MOD_ENABLE
-#define ADB_FILESYNC_MOD_ENABLE
-#define ADB_USING_SSDP
-#define PKG_USING_ADBD_V111
 
 /* system packages */
 
@@ -390,7 +360,6 @@
 #define BSP_USING_PWM3_CH3
 #define BSP_USING_TIM15
 #define BSP_USING_TIM16
-#define BSP_USING_USBD
 #define BSP_USING_WDT
 
 /* External Libraries */

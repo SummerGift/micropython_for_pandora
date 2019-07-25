@@ -14,6 +14,6 @@ if GetDepend('LSSDP_USING_SAMPLES'):
 path  = [cwd + '/inc']
 
 # add src and include to group.
-group = DefineGroup('lssdp', src, depend = [''], CPPPATH = path)
+group = DefineGroup('lssdp', src, depend = ['PKG_USING_LSSDP'], CPPPATH = path)
 
 Return('group')
