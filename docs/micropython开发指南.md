@@ -1,11 +1,7 @@
 # MicroPython 开发指南
 
-## 将 MicroPython 设置为开机自启动
-
-### 在 main 线程中启动 MicroPython
-### 增大 main 线程栈
-### 配置 MicroPython 运行环境堆大小
-### 在根目录挂载文件系统
+## MicroPython 固件介绍
+- 介绍可以使用哪些固件进行体验，如何获取固件
 
 ## MicroPython 开发环境使用介绍
 
@@ -24,8 +20,16 @@
 - 工程中文件的引用关系讲解
 
 ### 向工程中添加示例代码
-- 如何添加示例代码到工程中
-- 如何添加库到工程中
+- 添加示例代码到工程中
+- 添加库到工程中
 
 ### 开机自动运行 main.py
-讲述 main.py 的作用。
+- 讲述 main.py 的作用
+
+## DIY 属于你的 MicroPython 固件 
+
+### 获取 MicroPython 软件包
+### 在 main 线程中启动 MicroPython
+### 增大 main 线程栈
+### 配置 MicroPython 运行环境堆大小
+### 在根目录挂载文件系统
