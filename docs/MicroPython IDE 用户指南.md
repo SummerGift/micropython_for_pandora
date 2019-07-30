@@ -66,19 +66,41 @@ RT-Thread 为广大开发者提供了[ **VSCode 最好用的 MicroPython 插件*
 
 ![run_code_snippet](assets/run_code_snippet.gif)
 
+还有更多贴心实用的功能等你来探索。
+
+### 注意事项
+
+- 需要选择 PowerShell 作为默认终端
+- 不要删除工程目录下的 `.mpyproject.json` 文件，该文件是 MicroPython 工程的配置文件
+
 ## MicroPython 工程详解
 
+在 MicroPython 开发环境中，我们使用工程的形式来组织 MicroPython 源文件，接下来将会详细介绍 MicroPython 工程相关的概念。
+
 ### 工程结构介绍
-- 工程的概念
-- 各个文件和文件夹的作用
+
+在 **创建一个 MicroPython 工程** 小节中，我们通过点击创建工程按钮，选择了一个文件夹作为 MicroPython 工程的根目录。此时 MicroPython 插件会默认在该目录下创建工程相关目录，并添加 `main.py` 文件，如下图所示：
+
+![1564458498973](assets/1564458498973.png)
+
+- `scripts` 文件夹用于存放 MicroPython 脚本文件
+- `.mpyproject.json` 是自动生成的工程的配置文件
+
+### 向工程中添加示例代码
+
+可以在示例程序中选择所需的文件添加到工程中，如下图所示：
+
+![1564459093450](assets/1564459093450.png)
+
+此时可以在工程中看到已经添加到工程中的 hello_python.py 文件：
+
+![1564459162459](assets/1564459162459.png)
+
+- 添加库到工程中
 
 ### 工程同步方式介绍
 - 文件同步的策略
 - 工程中文件的引用关系讲解
-
-### 向工程中添加示例代码
-- 添加示例代码到工程中
-- 添加库到工程中
 
 ### 开机自动运行 main.py
 - 讲述 main.py 的作用
