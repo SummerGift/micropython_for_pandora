@@ -1,4 +1,4 @@
-# MicroPython 开发指南
+# MicroPython IDE 用户指南
 
 ## MicroPython 固件介绍
 
