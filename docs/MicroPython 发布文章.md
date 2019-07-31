@@ -18,7 +18,7 @@ MicroPython 的到来为嵌入式开发提供了新的可能，同时带来了�
 
 为了能让广大开发者能充分体验到 MicroPython 带来的便利性和优越性，RT-Thread 推出了 [**最好用的 MicroPython 开发环境**](https://marketplace.visualstudio.com/items?itemName=RT-Thread.rt-thread-micropython) 来帮助大家通过 MicroPython 进行项目开发。
 
-## 功能特点
+## 功能示例
 
 RT-Thread MicroPython 开发环境十分强大，它到底能提供什么样的功能呢，让我们一起来看一看：
 
@@ -26,10 +26,9 @@ RT-Thread MicroPython 开发环境十分强大，它到底能提供什么样的�
 
   ![uart_connect](assets/uart_connect-1564540918166.gif)
 
-- 支持 MicroPython REPL 交互环境
+- 灵活使用的 MicroPython REPL 交互环境
 
   ![use_repl](assets/use_repl.gif)
-
 
 - 支持基于 MicroPython 的代码智能补全
 
@@ -42,6 +41,14 @@ RT-Thread MicroPython 开发环境十分强大，它到底能提供什么样的�
 - 支持直接在设备上运行示例代码
 
   ![run_example](assets/run_example-1564541024332.gif)
+  
+  在潘多拉开发板上运行 LCD 控制示例：
+  
+  ![run_lcd](assets/run_lcd.gif)
+  
+  潘多拉开发板上的运行效果：
+  
+  ![pandora_lcd](assets/pandora_lcd.jpg)
 
 - 支持运行选中的代码片段
 
@@ -53,10 +60,10 @@ RT-Thread MicroPython 开发环境十分强大，它到底能提供什么样的�
 
 ## 获取方式及使用方法
 
-如果你手上有 IoT board 开发板，那么你可以直接使用 [IoT SDK 的 31 号例程](https://github.com/RT-Thread/IoT_Board/tree/master/examples/31_micropython) 所提供的固件来体验 MicroPython。
-
-如果没有 IoT board 可以参考《MicroPython 开发指南》，使用 RT-Thread 发布的 micropython 软件包，在自己的开发板上运行 micropython。
+接下来可以通过阅读《MicroPython IDE 用户指南》来了解开发环境的详细使用方式，快来动手试一试吧。
 
 ## 相关文档
 
 MicroPython 开发指南
+
+MicroPython 固件开发指南
