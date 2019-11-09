@@ -41,4 +41,4 @@ MicroPython 固件硬件支持情况如下所示：
 
 ## 开发资源介绍
 
-- RT-Thread MicroPython 开发环境
+- [RT-Thread MicroPython 开发环境](https://marketplace.visualstudio.com/items?itemName=RT-Thread.rt-thread-micropython)
