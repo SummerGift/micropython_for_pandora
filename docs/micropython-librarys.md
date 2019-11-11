@@ -4,7 +4,7 @@
 
 - [`Builtin functions and exceptions`](std-librarys/builtins.md) – 内置函数与异常
 - [`cmath`](std-librarys/cmath.md)  – 复数运算函数功能
-- [`gc`](std-librarys/builtins.md) – 控制垃圾收集器
+- [`gc`](std-librarys/gc.md) – 控制垃圾收集器
 - [`math`](std-librarys/math.md) – 数学函数功能
 - [`sys`](std-librarys/sys.md) – 系统特定功能
 - [`uarray`](std-librarys/uarray.md) – 数组存储功能
