@@ -10,34 +10,39 @@ IoT Board 潘多拉是 RT-Thread 推出的一款物联网开发板，它给开�
 
 MicroPython 固件硬件支持情况如下所示：
 
-| 外设名称 | 引脚号 | 简介 |
-| -------- | ------ | ---- |
-| pin      |        |      |
-| led      |        |      |
-| key      |        |      |
-| uart     |        |      |
-| i2c      |        |      |
-| spi      |        |      |
-| adc      |        |      |
-| pwm      |        |      |
-| timer    |        |      |
-| wdt      |        |      |
-| beeper   |        |      |
-| lcd      |        |      |
-| wifi     |        |      |
+| 外设名称 | 引脚号                                         | 简介                                        |
+| -------- | ---------------------------------------------- | ------------------------------------------- |
+| pin      | PA4 PA8, PB8-9 PB10-15, PC2 PC4 PC6-7, PD12-15 | 开发板引出的，可自由分配的 IO，支持引脚中断 |
+| led      | PE7                                            | 红色 led 灯                                 |
+| rgb      | R: PE7, G: PE8, B: PE9                         | rgb 灯                                      |
+| key      | KEY0: PD10, KEY1: PD9, KEY2: PD8               | 输入按键                                    |
+| uart1    | PA9, PA10                                      | 串口1                                       |
+| i2c      |                                                | 软件 i2c 可选择任意 pin                     |
+| spi      |                                                | 软件 spi 可选择任意引出 pin                 |
+| adc      | PC4                                            | adc1，通道 13                               |
+| pwm      |                                                | pwm3, 通道 3                                |
+| timer    |                                                | 硬件定时器 15                               |
+| wdt      |                                                | 看门狗                                      |
+| rtc      |                                                | 实时时钟                                    |
+| beeper   | PB2                                            | 蜂鸣器                                      |
+| lcd      |                                                | lcd 显示屏                                  |
+| wifi     |                                                | wifi 网络连接                               |
+| aht10    | CLK: PD6, SDA: PC1                             | 温湿度传感器                                |
+| ap3216c  | CLK: PC0, SDA: PC1                             | 接近与光强传感器                            |
+| icm20608 | CLK: PC0, SDA: PC1                             | 六轴传感器                                  |
 
 ## IoT Board machine 类介绍
 
-- class ADC – analog to digital conversion
-- class I2C – a two-wire serial protocol
-- class LCD – LCD control for the LCD touch-sensor pyskin
-- class LED – LED object
 - class Pin – control I/O pins
-- class RTC – real time clock
+- class I2C – a two-wire serial protocol
 - class SPI – a master-driven serial protocol
-- class Timer – control internal timers
-- class TimerChannel — setup a channel for a timer
 - class UART – duplex serial communication bus
+- class ADC – analog to digital conversion
+- class PWM – Pulse-Width Modulation
+- class LCD – LCD control for the LCD touch-sensor pyskin
+- class RTC – real time clock
+- class Timer – control internal timers
+- class network – connect to the network
 
 ## 开发资源介绍
 
