@@ -1,14 +1,14 @@
-# MicroPython for Pandora IoT Board 
+# MicroPython for Pandora IoT Board
 
 ![IoT_Board](docs/figures/IoT_Board.png)
 
 IoT Board 潘多拉是 RT-Thread 推出的一款物联网开发板，它给开发者带来了物联网时代的无限可能。而现在，它已经不仅仅是一块简单的物联网开发板，因为它已经全面支持 MicroPython 。在 IoT Board 上，你将会体验到有别于传统的，前所未有的开发方式。
 
-借助于 MicroPython，你将有能力使用 Python 语言控制所有硬件外设，体验高级语言带来的便利特性，与此同时你还可以利用高级软件库快速实现你的 IoT 设想。
+借助于 MicroPython，你将有能力使用 Python 语言控制所有硬件外设，体验高级语言带来的便利特性，与此同时你还可以利用高级软件库快速实现你的 IoT 构想。
 
-## 功能简介
+## 硬件支持
 
-MicroPython 固件硬件支持情况如下所示：
+Pandora MicroPython 固件硬件功能如下所示：
 
 | 外设名称 | 引脚号                                         | 简介                                        |
 | -------- | ---------------------------------------------- | ------------------------------------------- |
@@ -20,7 +20,7 @@ MicroPython 固件硬件支持情况如下所示：
 | i2c      |                                                | 软件 i2c 可选择任意 pin                     |
 | spi      |                                                | 软件 spi 可选择任意引出 pin                 |
 | adc      | PC4                                            | adc1，通道 13                               |
-| pwm      |                                                | pwm3, 通道 3                                |
+| pwm      | PB0                                            | pwm3,  通道 3,  用于红外发射                |
 | timer    |                                                | 硬件定时器 15                               |
 | wdt      |                                                | 看门狗                                      |
 | rtc      |                                                | 实时时钟                                    |
@@ -31,19 +31,10 @@ MicroPython 固件硬件支持情况如下所示：
 | ap3216c  | CLK: PC0, SDA: PC1                             | 接近与光强传感器                            |
 | icm20608 | CLK: PC0, SDA: PC1                             | 六轴传感器                                  |
 
-## IoT Board machine 类介绍
+## MicroPython 库
 
-- class Pin – control I/O pins
-- class I2C – a two-wire serial protocol
-- class SPI – a master-driven serial protocol
-- class UART – duplex serial communication bus
-- class ADC – analog to digital conversion
-- class PWM – Pulse-Width Modulation
-- class LCD – LCD control for the LCD touch-sensor pyskin
-- class RTC – real time clock
-- class Timer – control internal timers
-- class network – connect to the network
+- [MicroPython Librarys](docs/micropython-librarys.md)
 
-## 开发资源介绍
+## RT-Thread MicroPython 开发环境
 
-- [RT-Thread MicroPython 开发环境](https://marketplace.visualstudio.com/items?itemName=RT-Thread.rt-thread-micropython)
+- [RT-Thread MicroPython develop environment](https://marketplace.visualstudio.com/items?itemName=RT-Thread.rt-thread-micropython)
