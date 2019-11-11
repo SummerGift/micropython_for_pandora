@@ -6,4 +6,5 @@
 
 下面具体的类实现了抽象网卡的接口，并提供了一种控制各种网络接口的方法。
 
-- [class WLAN – control built-in WiFi interfaces](./03-network-WLAN.md)
+- [class WLAN – control built-in WiFi interfaces](network/wlan.md)
+

@@ -41,69 +41,36 @@
 
 ### 常数
 
+- `IRQ` 唤醒值
 #### **machine.IDLE**
 #### **machine.SLEEP**
 #### **machine.DEEPSLEEP**
-`IRQ` 的唤醒值。
 
+- 复位
 #### **machine.PWRON_RESET **
 #### **machine.HARD_RESET **
 #### **machine.WDT_RESET **
 #### **machine.DEEPSLEEP_RESET **
 #### **machine.SOFT_RESET**
-复位的原因。
 
+- 唤醒
 #### **machine.WLAN_WAKE**
 #### **machine.PIN_WAKE**
 #### **machine.RTC_WAKE**
-唤醒的原因。
 
-### 类
+### 硬件控制类
 
-#### [class Pin](02-machine-Pin.md)     - 控制 I/O 引脚
-#### [class I2C](03-machine-I2C.md)     - I2C 协议
-#### [class SPI](04-machine-SPI.md)     - SPI 协议
-#### [class UART](05-machine-UART.md)   - 串口
-#### [class LCD](06-machine-LCD.md)     - LCD
-#### [class RTC](07-machine-RTC.md)     - RTC
-#### [class PWM](08-machine-PWM.md)     - PWM
-#### [class ADC](09-machine-ADC.md)     - ADC
-#### [class WDT](10-machine-WDT.md)     - 看门狗
-#### [class TIMER](11-machine-Timer.md) - 定时器
-
-### 示例 
-
-```
->>> import machine
->>>
->>> machine.info()              # show information about the board
----------------------------------------------
-RT-Thread
----------------------------------------------
-total memory: 131048
-used memory : 4920
-maximum allocated memory: 5836
-thread     pri  status      sp     stack size max used left tick  error
----------- ---  ------- ---------- ----------  ------  ---------- ---
-elog_async  31  suspend 0x000000a8 0x00000400    26%   0x00000003 000
-tshell      20  ready   0x0000019c 0x00001000    39%   0x00000006 000
-tidle       31  ready   0x0000006c 0x00000100    50%   0x0000000b 000
-SysMonitor  30  suspend 0x000000a8 0x00000200    32%   0x00000005 000
-timer        4  suspend 0x0000007c 0x00000200    24%   0x00000009 000
----------------------------------------------
-qstr:
-  n_pool=0
-  n_qstr=0
-  n_str_data_bytes=0
-  n_total_bytes=0
----------------------------------------------
-GC:
-  16064 total
-  464 : 15600
-  1=14 2=6 m=3
->>> machine.enable_irq()        # enable interrupt
->>> machine.disable_irq()       # disable interrupt, WARNING: this operation is dangerous
->>> machine.reset()             # hard reset, like push RESET button
-```
+| 功能                      | 简介          |
+| ------------------------- | ------------- |
+| [Pin](machine/Pin.md)     | 控制 I/O 引脚 |
+| [I2C](machine/I2C.md)     | I2C 协议      |
+| [SPI](machine/SPI.md)     | SPI 协议      |
+| [UART](machine/UART.md)   | 串口          |
+| [LCD](machine/LCD.md)     | LCD           |
+| [RTC](machine/RTC.md)     | RTC           |
+| [PWM](machine/PWM.md)     | PWM           |
+| [ADC](machine/Pin.md)     | ADC           |
+| [WDT](machine/WDT.md)     | 看门狗        |
+| [TIMER](machine/Timer.md) | 硬件定时器    |
 
 更多内容可参考 [machine](http://docs.micropython.org/en/latest/pyboard/library/machine.html) 。
