@@ -1,4 +1,4 @@
-## **ucollections** – 收集和容器类型
+## **ucollections** – 集合与容器类型
 
 **ucollections** 模块实现了专门的容器数据类型，它提供了 Python 的通用内置容器的替代方案，包括了字典、列表、集合和元组。
 
