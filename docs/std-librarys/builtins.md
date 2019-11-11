@@ -1,34 +1,103 @@
-## **rtthread** – 系统相关函数
+# Builtin functions and exceptions
 
-**rtthread** 模块提供了与 RT-Thread 操作系统相关的功能，如查看栈使用情况等。
+所有的内饰函数和异常类型都在下面描述。
 
-### 函数
+## 函数和类型
 
-#### rtthread.current_tid()  
-返回当前线程的 id 。
+- abs()
+- all()
+- any()
+- bin()
+- **class** bool
+- **class** bytearray
+- **class** bytes
+- callable()
+- chr()
+- classmethod()
+- compile()
+- **class** complex
+- delattr(obj, name)
 
-#### rtthread.is_preempt_thread()  
-返回是否是可抢占线程。
+- **class** dict
+- dir()
 
-#### rtthread.stacks_analyze()  
-返回当前系统线程和栈使用信息。
+- divmod()
+- enumerate()
+- eval()
+- exec()
+- filter()
+- **class** float
+- **class** frozenset
+- getattr()
+- globals()
+- hasattr()
+- hash()
+- hex()
+- id()
+- input()
+- **class** int
+  - classmethod from_bytes(bytes, byteorder)
+    In MicroPython, byteorder parameter must be positional (this is compatible with CPython).
+  - to_bytes(size, byteorder)
+    In MicroPython, byteorder parameter must be positional (this is compatible with CPython).
 
-### 示例
+- isinstance()
+- issubclass()
+- iter()
+- len()
+- class list
+- locals()
+- map()
+- max()
+- **class** memoryview
+- min()
+- next()
+- **class** object
+- oct()
+- open()
+- ord()
+- pow()
+- print()
+- property()
+- range()
+- repr()
+- reversed()
+- round()
+- class set
+- setattr()
+- **class** slice
+  - The slice builtin is the type that slice objects have.
+- sorted()
+- staticmethod()
+- **class** str
+- sum()
+- super()
+- **class** tuple
+- type()
+- zip()
 
-```
->>> import rtthread
->>> 
->>> rtthread.is_preempt_thread()       # determine if code is running in a preemptible thread
-True
->>> rtthread.current_tid()             # current thread id
-268464956
->>> rtthread.stacks_analyze()          # show thread information
-thread     pri  status      sp     stack size max used left tick  error
----------- ---  ------- ---------- ----------  ------  ---------- ---
-elog_async  31  suspend 0x000000a8 0x00000400    26%   0x00000003 000
-tshell      20  ready   0x00000260 0x00001000    39%   0x00000003 000
-tidle       31  ready   0x00000070 0x00000100    51%   0x0000000f 000
-SysMonitor  30  suspend 0x000000a4 0x00000200    32%   0x00000005 000
-timer        4  suspend 0x00000080 0x00000200    25%   0x00000009 000
->>> 
-```
+## 异常类型
+- **exception** AssertionError
+- **exception** AttributeError
+- **exception** Exception
+- **exception** ImportError
+- **exception** IndexError
+- **exception** KeyboardInterrupt
+- **exception** KeyError
+- **exception** MemoryError
+- **exception** NameError
+- **exception** NotImplementedError
+- **exception** OSError
+  - See CPython documentation: OSError. MicroPython doesn’t implement errno attribute, instead use the standard way to access exception arguments: exc.args[0].
+
+- **exception** RuntimeError
+- **exception** StopIteration
+- **exception** SyntaxError
+- **exception** SystemExit
+  - See CPython documentation: SystemExit.
+
+- **exception** TypeError
+  - See CPython documentation: TypeError.
+
+- **exception** ValueError
+- **exception** ZeroDivisionError
