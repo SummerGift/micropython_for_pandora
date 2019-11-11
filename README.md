@@ -2,7 +2,7 @@
 
 ![IoT_Board](docs/figures/IoT_Board.png)
 
-IoT Board 潘多拉是 RT-Thread 推出的一款物联网开发板，它给开发者带来了物联网时代的无限可能。而现在，它已经不仅仅是一块简单的物联网开发板，因为它已经全面支持 MicroPython 。在 IoT Board 上，你将会体验到有别于传统的，前所未有的开发方式。
+**IoT Board 潘多拉** 是 RT-Thread 推出的一款物联网开发板，它给开发者带来了物联网时代的无限可能。而现在，它已经不仅仅是一块简单的物联网开发板，因为它已经全面支持 **MicroPython** 。在 IoT Board 上，你将会体验到有别于传统的，前所未有的开发方式。
 
 借助于 MicroPython，你将有能力使用 Python 语言控制所有硬件外设，体验高级语言带来的便利特性，与此同时你还可以利用高级软件库快速实现你的 IoT 构想。
 
@@ -31,10 +31,33 @@ Pandora MicroPython 固件硬件功能如下所示：
 | ap3216c  | CLK: PC0, SDA: PC1                             | 接近与光强传感器                            |
 | icm20608 | CLK: PC0, SDA: PC1                             | 六轴传感器                                  |
 
-## MicroPython 库
+## 入门
+
+如果你从来没有了解过 MciroPython, 可以阅读这篇简短的文章来 [带你入门 MicroPython](docs/introduction.md)。
+
+## 升级你的 IoT Board 到 MicroPython 版本
+
+### 固件下载地址
+
+- [Pandora IoT Board firmware](https://www.rt-thread.org/qa/forum.php?mod=viewthread&tid=12305&extra=page%3D1%26filter%3Dtypeid%26typeid%3D20)
+
+### RT-Thread MicroPython 开发环境
+
+- [RT-Thread MicroPython develop environment](https://marketplace.visualstudio.com/items?itemName=RT-Thread.rt-thread-micropython)
+
+### MicroPython 示例程序
+
+- [Pandora IoT Board  MicroPython examples](https://github.com/RT-Thread/mpy-snippets/tree/master/examples/03.board/1.stm32l4_pandora)
+
+### MicroPython 模块详解
 
 - [MicroPython Librarys](docs/micropython-librarys.md)
 
-## RT-Thread MicroPython 开发环境
+## 联系我们
 
-- [RT-Thread MicroPython develop environment](https://marketplace.visualstudio.com/items?itemName=RT-Thread.rt-thread-micropython)
+如果在使用的过程中遇到问题，您可以用如下方式联系我们：
+
+- 在 github 上提交 issue
+- 在 [RT-Thread MicroPython 官方论坛](https://www.rt-thread.org/qa/forum.php?mod=forumdisplay&fid=2&filter=typeid&typeid=20) 发帖
+
+- RT-Thread MicroPython 交流 QQ 群：703840633
