@@ -27,9 +27,21 @@
 
 ### RT-Thread MicroPython 特定库
 
-在下列库中，实现了 RT-Thread MicroPython 中的一些特定功能。
+在 RT-Thread 移植的 MicroPython 版本中，实现了如下特定功能库：
 
-- [`micropython`](spec-librarys/micropython.md) – MicroPython 内部功能访问与控制模块
+- [`micropython`](spec-librarys/micropython.md) – 实现 MicroPython 内部功能访问与控制
 - [`rtthread`](spec-librarys/rtthread.md) – RT-Thread 系统功能模块
-- [`machine`](spec-librarys/machine.md) – 硬件功能模块
+- [`machine`](spec-librarys/machine.md) – 硬件控制模块
+    - [Pin](spec-librarys/machine/Pin.md) 
+    - [I2C ](spec-librarys/machine/I2C.md)
+    - [SPI](spec-librarys/machine/SPI.md)
+    - [UART](spec-librarys/machine/UART.md)
+    - [LCD](spec-librarys/machine/LCD.md)
+    - [RTC](spec-librarys/machine/RTC.md)
+    - [PWM](spec-librarys/machine/PWM.md)
+    - [ADC](spec-librarys/machine/Pin.md)
+    - [WDT](spec-librarys/machine/WDT.md)
+    - [TIMER](spec-librarys/machine/Timer.md)
+
 - [`network`](spec-librarys/network.md) – 网络功能配置模块
+    - [wlan](spec-librarys/network/wlan.md) 

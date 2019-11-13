@@ -58,19 +58,3 @@
 #### **machine.PIN_WAKE**
 #### **machine.RTC_WAKE**
 
-### 硬件控制类
-
-| 功能                      | 简介          |
-| ------------------------- | ------------- |
-| [Pin](machine/Pin.md)     | 控制 I/O 引脚 |
-| [I2C](machine/I2C.md)     | I2C 协议      |
-| [SPI](machine/SPI.md)     | SPI 协议      |
-| [UART](machine/UART.md)   | 串口          |
-| [LCD](machine/LCD.md)     | LCD           |
-| [RTC](machine/RTC.md)     | RTC           |
-| [PWM](machine/PWM.md)     | PWM           |
-| [ADC](machine/Pin.md)     | ADC           |
-| [WDT](machine/WDT.md)     | 看门狗        |
-| [TIMER](machine/Timer.md) | 硬件定时器    |
-
-更多内容可参考 [machine](http://docs.micropython.org/en/latest/pyboard/library/machine.html) 。
