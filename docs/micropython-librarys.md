@@ -25,7 +25,7 @@
 - [`uzlib`](std-librarys/uzlib.md) – zlib 解压
 - [`_thread`](std-librarys/_thread.md) – 多线程支持
 
-### RT-Thread MicroPython 特定库
+### MicroPython 特定库
 
 在 RT-Thread 移植的 MicroPython 版本中，实现了如下特定功能库：
 
