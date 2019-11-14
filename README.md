@@ -1,6 +1,6 @@
 # MicroPython for Pandora IoT Board
 
-![IoT_Board](docs/figures/IoT_Board.png)
+![IoT_Board](docs/assets/IoT_Board.png)
 
 **IoT Board 潘多拉** 是 RT-Thread 推出的一款物联网开发板，它给开发者带来了物联网时代的无限可能。而现在，它已经不仅仅是一块简单的物联网开发板，因为它已经全面支持 **MicroPython** 。在 IoT Board 上，你将会体验到有别于传统的，前所未有的开发方式。
 
