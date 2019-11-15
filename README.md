@@ -31,10 +31,9 @@ Pandora MicroPython 固件硬件功能如下所示：
 | ap3216c  | CLK: PC0, SDA: PC1                             | 接近与光强传感器                          |
 | icm20608 | CLK: PC0, SDA: PC1                             | 六轴传感器                                |
 
-
 ## 入门必读
 
-如果您从来没有了解过 MicroPython, 可以阅读这篇简短的文章来 [带你入门 MicroPython](docs/introduction.md)。
+如果您从来没有了解过 MicroPython, 可以阅读这篇简短的文章来 [带你入门 MicroPython](https://github.com/RT-Thread-packages/micropython/blob/master/docs/introduction.md)。
 
 ## 开启 MicroPython 之旅
 
@@ -63,7 +62,7 @@ Pandora MicroPython 固件硬件功能如下所示：
 
 ### MicroPython 模块详解
 
-- [MicroPython Librarys](docs/micropython-librarys.md)
+- [MicroPython Librarys](https://github.com/RT-Thread-packages/micropython/blob/master/docs/micropython-librarys.md)
 
 
 ## 联系我们
