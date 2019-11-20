@@ -108,7 +108,6 @@ _exit_tab:
 static void mp_sys_resource_gc(struct dfs_fdtable *fd_table_bak)
 {
     struct dfs_fdtable *fd_table;
-    struct dfs_fd *fd;
     
     if (!fd_table_bak) return;
 
@@ -120,9 +119,7 @@ static void mp_sys_resource_gc(struct dfs_fdtable *fd_table_bak)
         {
             if ((i < fd_table_bak->maxfd && fd_table_bak->fds[i] == RT_NULL) || (i >= fd_table_bak->maxfd))
             {
-                fd = fd_table->fds[i];
-                dfs_file_close(fd);
-                fd_put(fd);
+                close(i + DFS_FD_OFFSET);
             }
         }
     }

@@ -26,13 +26,12 @@
 
 #include <stdio.h>
 #include <string.h>
-#include <dfs_posix.h>
 #include "py/mphal.h"
 #include "py/runtime.h"
 #include "py/mperrno.h"
 
 #if MICROPY_PY_MACHINE_LCD
-
+#include <dfs_posix.h>
 #include "machine_lcd.h"
 #include <drv_lcd.h>
 
