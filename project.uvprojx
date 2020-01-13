@@ -1806,6 +1806,11 @@
               <FilePath>packages\micropython-v1.10.1\port\modules\machine\machine_pin.c</FilePath>
             </File>
             <File>
+              <FileName>machine_player.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\micropython-v1.10.1\port\modules\machine\machine_player.c</FilePath>
+            </File>
+            <File>
               <FileName>machine_pwm.c</FileName>
               <FileType>1</FileType>
               <FilePath>packages\micropython-v1.10.1\port\modules\machine\machine_pwm.c</FilePath>

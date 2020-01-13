@@ -65,7 +65,7 @@
 #define MICROPY_KBD_EXCEPTION       (1)
 #define MICROPY_HELPER_REPL         (1)
 #define MICROPY_HELPER_LEXER_UNIX   (0)
-#define MICROPY_ENABLE_SOURCE_LINE  (0)
+#define MICROPY_ENABLE_SOURCE_LINE  (1)
 #define MICROPY_ENABLE_DOC_STRING   (0)
 #define MICROPY_ENABLE_SCHEDULER    (1)
 #define MICROPY_ERROR_REPORTING     (MICROPY_ERROR_REPORTING_TERSE)
@@ -354,6 +354,7 @@ extern const struct _mp_obj_module_t mp_module_io;
 extern const struct _mp_obj_fun_builtin_fixed_t machine_soft_reset_obj;
 extern const struct _mp_obj_module_t mp_module_ffi;
 extern const struct _mp_obj_module_t mp_module_network;
+extern const struct _mp_obj_module_t mp_module_userfunc;
 
 #if MICROPY_PY_RTTHREAD
 #define RTTHREAD_PORT_BUILTIN_MODULES { MP_ROM_QSTR(MP_QSTR_rtthread), MP_ROM_PTR(&mp_module_rtthread) },
@@ -478,6 +479,8 @@ extern const struct _mp_obj_module_t mp_module_network;
 #define MODNETWORK_PORT_BUILTIN_MODULES
 #endif
 
+#define USERFUNC_PORT_BUILTIN_MODULES { MP_ROM_QSTR(MP_QSTR_userfunc), MP_ROM_PTR(&mp_module_userfunc) },
+
 // extra built in names to add to the global namespace
 #define MICROPY_PORT_BUILTINS \
     { MP_ROM_QSTR(MP_QSTR_exit), MP_ROM_PTR(&machine_soft_reset_obj) }, \
@@ -493,6 +496,7 @@ extern const struct _mp_obj_module_t mp_module_network;
     MODUTIME_PORT_BUILTIN_MODULES \
     MODFFI_PORT_BUILTIN_MODULES \
     MODNETWORK_PORT_BUILTIN_MODULES \
+    USERFUNC_PORT_BUILTIN_MODULES \
 
 #define MICROPY_PORT_BUILTIN_MODULE_WEAK_LINKS \
     MODUTIME_PORT_BUILTIN_MODULE_WEAK_LINKS \
