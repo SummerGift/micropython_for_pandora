@@ -10,7 +10,7 @@
       <TargetName>rt-thread_stm32l4xx</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>5060750::V5.06 update 6 (build 750)::ARMCC</pCCUsed>
+      <pCCUsed>5060528::V5.06 update 5 (build 528)::ARMCC</pCCUsed>
       <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
@@ -54,7 +54,7 @@
           <CreateLib>0</CreateLib>
           <CreateHexFile>0</CreateHexFile>
           <DebugInformation>1</DebugInformation>
-          <BrowseInformation>1</BrowseInformation>
+          <BrowseInformation>0</BrowseInformation>
           <ListingPath>.\build\</ListingPath>
           <HexFormatSelection>1</HexFormatSelection>
           <Merge32K>0</Merge32K>
@@ -787,7 +787,7 @@
                   <MiscControls> --c99 --c99</MiscControls>
                   <Define> </Define>
                   <Undefine> </Undefine>
-                  <IncludePath></IncludePath>
+                  <IncludePath> </IncludePath>
                 </VariousControls>
               </Cads>
               <Aads>
@@ -1806,11 +1806,6 @@
               <FilePath>packages\micropython-v1.10.1\port\modules\machine\machine_pin.c</FilePath>
             </File>
             <File>
-              <FileName>machine_player.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>packages\micropython-v1.10.1\port\modules\machine\machine_player.c</FilePath>
-            </File>
-            <File>
               <FileName>machine_pwm.c</FileName>
               <FileType>1</FileType>
               <FilePath>packages\micropython-v1.10.1\port\modules\machine\machine_pwm.c</FilePath>
@@ -1839,6 +1834,11 @@
               <FileName>modmachine.c</FileName>
               <FileType>1</FileType>
               <FilePath>packages\micropython-v1.10.1\port\modules\machine\modmachine.c</FilePath>
+            </File>
+            <File>
+              <FileName>moduserfunc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>packages\micropython-v1.10.1\port\modules\user\moduserfunc.c</FilePath>
             </File>
             <File>
               <FileName>netutils.c</FileName>
@@ -2055,7 +2055,7 @@
                   <MiscControls> --c99</MiscControls>
                   <Define> </Define>
                   <Undefine> </Undefine>
-                  <IncludePath></IncludePath>
+                  <IncludePath> </IncludePath>
                 </VariousControls>
               </Cads>
               <Aads>
